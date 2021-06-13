@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div sobre img</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="experience"> 
+       
+        <img class="sliding-background" src="./img/dotted-map-blanco.png" alt="">
+        
+        <img id="marcas" class="animate__animated animate__fadeIn animate__infinite" src="./img/dotted-map-MARCAS.png" alt="" usemap="#image-map">
+        <!-- <img src="dotted-map-MARCAS.png" usemap="#image-map"> -->
+
+        <map name="image-map">
+            <area onclick="changeCity('dubai');" class="area-dubai" target="" alt="dubai" title="dubai" href="script:aparece();" coords="845,273,844,284,855,290,867,285,867,271,852,264" shape="poly">
+            <area onclick="changeCity('kuala-lumpur');" class="area-kuala-lumpur" target="" alt="kuala-lumpur" title="kuala-lumpur" href="" coords="1064,403,1076,416,1088,407,1088,397,1076,392" shape="poly">
+            <area onclick="changeCity('hong-kong');" class="area-hong-kong" target="" alt="hong-kong" title="hong-kong" href="" coords="1114,282,1114,295,1124,301,1133,296,1134,285,1123,278" shape="poly">
+            <area onclick="changeCity('shangai');" class="area-shangai" target="" alt="shangai" title="shangai" href="" coords="1142,235,1147,245,1160,245,1166,234,1157,225,1146,225,1142,236,1161,224" shape="poly">
+            <area onclick="changeCity('london');" class="area-london" target="" alt="london" title="london" href="" coords="582,133,597,133,600,123,591,114,582,114,577,122" shape="poly">
+            <area onclick="changeCity('miami');" class="area-miami" target="" alt="" title="miami" href="" coords="225,273,239,272,242,259,235,249,223,248,219,258,217,266" shape="poly">
+        </map>
+    </section>
+
+    <div id="experience_city">
+        <section class="city dubai"></section>
+        <section class="city kuala-lumpur"></section>
+        <section class="city hong-kong"></section>
+        <section class="city shangai"></section>
+        <section class="city london"></section>
+        <section class="city miami"></section>
+    </div>
+  
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-imagemapster@1.2.10/dist/jquery.imagemapster.min.js"></script>
+<script src="./js/jquery.rwdImageMaps.min.js"></script>
+<script >
+    
+
+
+$(".area-dubai").click( function(e){
+    e.preventDefault();
+    document.querySelector('.dubai').style.display = 'block'; 
+});
+$(".area-kuala-lumpur").click( function(e){
+    e.preventDefault();
+    document.querySelector('.kuala-lumpur').style.display = 'block';
+});
+
+
+
+
+/* function myFunction() {
+  document.getElementsByClassName(".city").style.zIndex = "-1";
+} */
+
+
+
+/* function changeCity(newCity){
+    var experience = document.getElementById('experience_city');
+    experience.style.display = newCity;
+    document.querySelector(newCity).style.display = 'block';
+    experience.style.zIndex = '9';
+    console.log(newCity);
+
+}
+ */
+</script>
+
+
+
+</body>
+</html>
