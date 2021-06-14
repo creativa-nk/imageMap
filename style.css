@@ -29,9 +29,12 @@ body{
     z-index: 2;
 }
 #experience_city{
-    /* background: cornflowerblue; */
-    height: 200px;
+    background: cornflowerblue;
+    position: absolute;
+    height: 100vh;
     width: 200px;
+    top: 0;
+    z-index: 0;
 }
 .dubai{
     height: 50px;
@@ -39,7 +42,8 @@ body{
     background: red;
     display:none;
     position: absolute;
-    z-index: 2;   
+    z-index: 4;
+     
 }
 .kuala-lumpur{
     height: 50px;
@@ -47,23 +51,24 @@ body{
     background: rgb(229, 255, 0);
     display:none;
     position: absolute;
-    z-index: 2;   
+    z-index: 4;
+     
 }
 .hong-kong{
     height: 50px;
-    width: 50px;
+    width: 100%;
     background: rgb(0, 255, 76);
     display:none;
     position: absolute;
-    z-index: 2;
+    
 }
-.sangai{
+.shangai{
     height: 50px;
     width: 50px;
     background: rgb(0, 195, 255);
     display:none;
     position: absolute;
-    z-index: 2;
+    
 }
 .london{
     height: 50px;
@@ -71,7 +76,8 @@ body{
     background: rgb(25, 0, 255);
     display:none;
     position: absolute;
-    z-index: 2;
+    z-index: 4;
+    
 }
 .miami{
     height: 50px;
@@ -79,5 +85,25 @@ body{
     background: rgb(153, 0, 255);
     display:none;
     position: absolute;
-    z-index: 2;
+    
 }
+
+
+
+
+
+.exp{
+    background: tomato;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.8em;
+    width: 100%;
+    padding: 0.2em;
+  }
+/*   .exp p{
+    width: 70%;
+  } */
+  .exp strong{
+    text-transform: uppercase;
+  }
