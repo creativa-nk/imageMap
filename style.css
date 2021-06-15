@@ -10,39 +10,45 @@ body{
   width: 100vw;
   color: white;
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-#experience{
-    /* background: green; */
-    margin-top: 4em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+.mapa::before {
+    content:"";
+    width:55%;
+    height: 10%;
+    position: absolute;
+    bottom: 10%;
+    background: linear-gradient(to bottom,  rgba(39, 39, 39, 0.466),rgb(5, 5, 5));
+    z-index: -2;
+    filter: blur(0.5rem);
+    transform: perspective(10px) rotateX(3deg);
+   /*  border-radius: 50%; */
   }
+
+
 .sliding-background{
     position: absolute;
     z-index: -1;
+   -webkit-box-reflect: below 100px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%, transparent), to(rgba(255,255,255,0.5))); 
 }
 #marca{
     position:absolute;
-    z-index: 2;
+    z-index: 20;
 }
-#experience_city{
-    background: cornflowerblue;
-    position: absolute;
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    z-index: 0;
-}
+
 .dubai{
-    height: 50px;
-    width: 50px;
-    background: red;
-    display:none;
+    height: 100%;
+    width: 100%;
+   /*  background: rgb(255, 0, 0); */
     position: absolute;
-    z-index: 4;
+    display:none;
+    flex-direction: row;   
+    justify-content: space-between;
+    z-index: -4;
      
 }
 .kuala-lumpur{
@@ -55,12 +61,14 @@ body{
      
 }
 .hong-kong{
-    height: 50px;
+    height: 100%;
     width: 100%;
-    background: rgb(0, 255, 76);
-    display:none;
+   /*  background: rgb(0, 255, 76); */
     position: absolute;
-    
+    display:none;
+    flex-direction: row;   
+    justify-content: space-between;
+    z-index: -4;
 }
 .shangai{
     height: 50px;
@@ -85,25 +93,40 @@ body{
     background: rgb(153, 0, 255);
     display:none;
     position: absolute;
-    
 }
-
-
-
+#experience_city{
+    /*  background: cornflowerblue; */
+     position: absolute;
+     height: 100vh;
+     width: 100vw;
+     top: 0;
+     z-index: -2;
+ }
 
 
 .exp{
-    background: tomato;
+   /*  background: tomato; */
     color: white;
+    text-align: left;
     display: flex;
-    justify-content: space-between;
-    margin-top: 2.8em;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 230px;
     padding: 0.2em;
-  }
-/*   .exp p{
-    width: 70%;
-  } */
-  .exp strong{
+}
+.exp strong{
     text-transform: uppercase;
-  }
+}
+.exp_img{
+margin-top: 4em;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.exp_img img{
+    height: 100%;
+}
+
+

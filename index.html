@@ -5,21 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>div sobre img</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- !!!IMPORTANTE!!!!  animacion texto experiencia-->
 </head>
 <body>
-    <section id="experience"> 
+    <div id="experience"> 
        
-        <img class="sliding-background" src="./img/dotted-map-blanco.png" alt="">
+        <div class="mapa">
+            <img class="sliding-background" src="./img/dotted-map-blanco.png" alt="">
+        </div>
         
         <img id="marcas" class="animate__animated animate__fadeIn animate__infinite" src="./img/dotted-map-MARCAS.png" alt="" usemap="#image-map">
         <!-- <img src="dotted-map-MARCAS.png" usemap="#image-map"> -->
 
-        <map name="image-map">
+        <map name="image-map" class="map">
             <area class="area-dubai" target="" alt="dubai" title="dubai" href="" coords="845,273,844,284,855,290,867,285,867,271,852,264" shape="poly">
             <area class="area-kuala-lumpur" target="" alt="kuala-lumpur" title="kuala-lumpur" href="" coords="1064,403,1076,416,1088,407,1088,397,1076,392" shape="poly">
             <area class="area-hong-kong" target="" alt="hong-kong" title="hong-kong" href="" coords="1114,282,1114,295,1124,301,1133,296,1134,285,1123,278" shape="poly">
@@ -27,19 +31,34 @@
             <area class="area-london" target="" alt="london" title="london" href="" coords="582,133,597,133,600,123,591,114,582,114,577,122" shape="poly">
             <area class="area-miami" target="" alt="" title="miami" href="" coords="225,273,239,272,242,259,235,249,223,248,219,258,217,266" shape="poly">
         </map>
-    </section>
+    </div>
 
-    <div id="experience_city">
-        <section class="dubai"></section>
-        <section class="kuala-lumpur"></section>
-        <section class="hong-kong">
+    <div id="experience_city"></div>
+        <section class="dubai">
             <div class="exp" data-aos='fade-left'>
-                <p><strong>Honjo & TMK - Executive Chef</strong> <br> 
-                <span>2019/2020</span> <br>
-                 Develop and open 2 hugely succesful restaurants in Hong Kong for Pirata Group</p>
-                
+                <img src="./img/morimoto_logo.jpg" style="width: 230px;" alt="">
+                <h1><strong>Morimoto Dubai - Executive Chef</strong></h1>
+                <p>I was part of the pre-opening team of Renaissance Downtown Dubai for Marriott, first in charge of David Myers restaurants and then recruiting and managing a team of 56 chef for Morimoto Dubai, leading a succesful launch of the concept</p>
+                <span>2016/2019</span>
+                <img src="./img/morimoto_dubai.jpg" style="width: 230px;" alt="">
             </div>
         </section>
+        <section class="kuala-lumpur"></section>
+
+        <section class="hong-kong">
+            <div class="exp" data-aos='fade-left'>
+                <img src="./img/honjo_logo.png" style="width: 230px;" alt="">
+                <h1><strong>Honjo & TMK - Executive Chef</strong></h1>
+                <p>Develop and open 2 hugely succesful restaurants in Hong Kong for Pirata Group</p>
+                <span>2019/2020</span>
+                <img src="./img/honjo_libro.jpg" style="width: 230px ;" alt="">
+            </div>
+            <div class="exp_img">
+                <img src="./img/honjo_hong-kong.png" alt="">
+            </div>
+        </section>
+
+        
         <section class="shangai"></section>
         <section class="london"></section>
         <section class="miami"></section>
@@ -79,7 +98,7 @@ $(".area-hong-kong").click( function(e){
     e.preventDefault();
     document.querySelector('.dubai').style.display = 'none'; 
     document.querySelector('.kuala-lumpur').style.display = 'none'; 
-    document.querySelector('.hong-kong').style.display = 'block';
+    document.querySelector('.hong-kong').style.display = 'flex';
     document.querySelector('.shangai').style.display = 'none';
     document.querySelector('.london').style.display = 'none';
     document.querySelector('.miami').style.display = 'none'; 
@@ -130,7 +149,21 @@ $(".area-miami").click( function(e){
 } */
 
 </script>
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!-- -------IMPORTANTE!!!!!-- animacion texto experiencia----- -->
+<script>
+  AOS.init({
+      offset:250,
+      duration:1000         /*  empieza cuando estamos haciendo scroll 400px, y dura 1s */
+  });
+</script>
+<script>
+    $("#pieces").pieces({
+   onStart:{
+      animation:"pieces101",
+      delay:2
+   }
+});
+</script>
 
 
 </body>
